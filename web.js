@@ -1,9 +1,10 @@
+var fs = require('fs');
 var express = require('express');
 var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World2!');
+  response.sendfile('./index.html');
 });
 
 var port = process.env.PORT || 8080;
