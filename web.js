@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
+// Define root path
 app.get('/', function(request, response) {
   response.sendfile('./index.html');
 });
